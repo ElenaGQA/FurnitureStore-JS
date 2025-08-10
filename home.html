@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+  <header>
+    <h1 id="name">MonoHaus</h1>
+    <div class="cart">
+      <span>&#128722;</span>
+      <span class="numberOfProducts">0</span>
+    </div>
+    <div class="burger">&#9776;</div>
+  </header>
+
+  <div class="container">
+    <nav class="menu">
+      <a href="./home.html" class="menuItem">Home</a>
+      <a href="./products.html" class="menuItem">Products</a>
+      <a href="./about.html" class="menuItem">About</a>
+      <a href="./contact.html" class="menuItem">Contact Us</a>
+    </nav>
+
+    <div class="mainContainer">
+
+      <div class="homeContainer">
+        <h1>Discover Stylish & Functional Furniture</h1>
+        <p>Upgrade your space with modern designs and quality craftsmanship.</p>
+        <a href="./products.html" id="productBtn">Browse products</a>
+      </div>
+
+      <div class="slider">
+        <div class="slides">
+          <div class="slide">
+            <img src="./Image/image1.jpg" alt="room with furniture" />
+          </div>
+          <div class="slide">
+            <img src="./Image/image2.jpeg" alt="room with furniture" />
+          </div>
+          <div class="slide">
+            <img src="./Image/image3.jpg" alt="room with furniture" />
+          </div>
+          <div class="slide">
+            <img src="./Image/image4.jpg" alt="room with furniture" />
+          </div>
+          <div class="slide">
+            <img src="./Image/image5.png" alt="room with furniture" />
+          </div>
+          <div class="sliderButtons">
+            <button id="left">&#10094;</button>
+            <button id="right">&#10095;</button>
+          </div>
+
+          <div class="dots">
+            <span class="dot" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+            <span class="dot" data-index="4"></span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="infoContainer">
+        <div class="infoBox">
+          <h2>Free Shipping</h2>
+          <h4>On all orders above $50</h4>
+        </div>
+        <div class="infoBox">
+          <h2>30-Day Return</h2>
+          <h4>Easy returns</h4>
+        </div>
+        <div class="infoBox">
+          <h2>24/7 Support</h2>
+          <h4>We are always here for you!</h4>
+          <a href="./contact.html" id="contactBtn">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="aboutBox">
+        <h1>Why Choose Us?</h1>
+        <h3>We deliver durable, beautifully designed products backed by years of craftsmanship. Every pice is made with
+          care and attention to detail. </h3>
+        <a href="./about.html" id="aboutBtn">Learn More</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer>© 2025 Product website. All rights reserved.</footer>
+
+  <script type="module" src="./home.js"></script>
+  <script src="./common.js"></script>
+</body>
+
+</html>

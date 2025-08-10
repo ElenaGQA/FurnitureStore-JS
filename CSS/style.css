@@ -1,0 +1,492 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: tan;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+#name {
+    font-family: "Lucida Handwriting";
+    font-size: 40px;
+    color: #111;
+    text-align: center;
+    padding: 3px;
+    letter-spacing: 3px;
+}
+
+.cart {
+    font-size: 30px;
+    position: relative;
+
+}
+
+.numberOfProducts {
+    display: none;
+    font-size: 20px;
+    position: absolute;
+    bottom: 14px;
+    left: 31px;
+    background-color: green;
+    border-radius: 50%;
+    padding: 1px 7px;
+
+}
+
+.burger {
+    display: none;
+    font-size: 30px;
+}
+
+.container {
+    display: flex;
+    gap: 10px;
+    min-height: 100vh;
+}
+
+.menu {
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    align-items: stretch;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.menuItem {
+    text-decoration: none;
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    justify-content: center;
+    flex: 2;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.addBtn {
+    padding: 5px 12px;
+    border: 1px;
+    border-radius: 3px;
+    background-color: burlywood;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 200px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 12px;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 52px;
+        left: 0;
+        width: 100%;
+        background-color: burlywood;
+        flex-direction: column;
+        align-items: center;
+        z-index: 10;
+    }
+
+    /* This class shows the menu */
+    .menu.open {
+        display: flex;
+        min-height: 100px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+}
+
+footer {
+    background-color: rgb(64, 68, 68);
+    color: aliceblue;
+    padding: 10px;
+    text-align: center;
+
+}
+
+
+/* ------HOME PAGE------- */
+
+
+.mainContainer {
+    margin: 0 auto;
+    width: 80%;
+
+}
+
+.homeContainer {
+    background-image: url("../Image/main_image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Lucida Handwriting";
+    color: rgb(39, 31, 24);
+    text-shadow: -1px 0 #b8b4b4, 0 1px #b8b4b4, 1px 0 #b8b4b4, 0 -1px #b8b4b4;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#productBtn {
+    background-color: rgb(165, 124, 20);
+    text-decoration: none;
+    font-family: "Courier New";
+    color: #f7f3ed;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px;
+    display: inline-block;
+}
+
+.slides {
+    /* position: absolute; */
+}
+
+.slider {
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin: 30px auto;
+    margin-bottom: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+
+@keyframes fade {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.slide img {
+    border-radius: 10px;
+    width: 100%;
+    max-height: 700px;
+    /* object-fit: contain; */
+    display: block;
+}
+
+
+.slide:nth-child(2),
+.slide:nth-child(3),
+.slide:nth-child(4),
+.slide:nth-child(5) {
+    display: none;
+}
+
+.sliderButtons button {
+    position: absolute;
+    /* top: 50%; */
+    font-size: 35px;
+    background: #fefefe;
+    border: none;
+    border-radius: 50%;
+    color: #d1ac06;
+    cursor: pointer;
+    z-index: 2;
+    padding: 10px;
+    /* transform: translate(-50%, -50%); */
+    transition: background 1s;
+    bottom: 50%;
+}
+
+
+
+
+.sliderButtons button:hover {
+    background: #d4c0a2;
+}
+
+#left {
+    left: 35px;
+}
+
+#right {
+    right: 35px;
+}
+
+.infoContainer {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding: 20px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.infoBox {
+    background-color: #77674a;
+    justify-content: center;
+    align-content: center;
+    color: #fefefe;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 180px;
+    transition: background 1s;
+}
+
+.infoBox:hover {
+    background: #442f10;
+}
+
+#contactBtn,
+#aboutBtn {
+    background-color: rgb(218, 162, 60);
+    text-decoration: none;
+    font-family: "Courier New";
+    font-size: 20px;
+    font-weight: bold;
+    color: #f7f3ed;
+    padding: 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+    display: inline-block;
+    transition: background 1s;
+}
+
+#contactBtn:hover,
+#aboutBtn:hover {
+    background: #ebe045;
+}
+
+.aboutBox {
+    margin: 10px auto;
+    width: 80%;
+    margin-bottom: 30px;
+    background-color: #77674a;
+    justify-content: center;
+    align-content: center;
+    color: #fefefe;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 380px;
+    transition: background 1s;
+}
+
+.aboutBox:hover {
+    background: #442f10;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(221, 188, 126);
+    margin-top: 10px;
+    transition: background 1s;
+}
+
+.dot:hover {
+    background-color: #000;
+}
+
+.dot.active {
+    background-color: #000;
+}
+
+/* ------ABOUT PAGE ------- */
+
+.aboutContainer {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.aboutHeader {
+    background-image: url("../Image/about_image.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#aboutName {
+    font-family: "Lucida Handwriting";
+    color: rgb(39, 31, 24);
+    text-shadow: -1px 0 #b8b4b4, 0 1px #b8b4b4, 1px 0 #b8b4b4, 0 -1px #b8b4b4;
+    animation-delay: 1.5s;
+}
+
+#aboutStatement {
+    animation-delay: 2s;
+}
+
+#aboutName,
+#aboutStatement {
+    animation: fadeInZoom 2s ease-out forwards;
+}
+
+@keyframes fadeInZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.2) translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.aboutText {
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin: 30px auto;
+    margin-bottom: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 20px;
+    border: 2px solid #a67c52;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(166, 124, 82, 0.4);
+}
+
+.aboutText #aboutText1{
+    display: block;
+}
+
+
+.aboutText h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #2c2c2c;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.aboutText p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+
+#readMoreBtn {
+    background-color: #8B5E3C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Segoe UI', sans-serif;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#readMoreBtn:hover {
+    background-color: #a46c45;
+    transform: translateY(-2px);
+
+}
+
+#readMoreBtn:active {
+    transform: scale(0.98);
+}
+
+#infoHeader {
+    color: #523d1e;
+    padding: 50px;
+    text-align: center;
+}

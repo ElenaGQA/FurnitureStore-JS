@@ -54,15 +54,15 @@ class Product {
 }
 
 let productList = [
-    new Product("./Image/bookshelf.jpg", "Bookshelf - large", "220cm bookshelf", "120$"),
-    new Product("./Image/bookshelf.jpg", "Bookshelf - medium", "190cm bookshelf", "110$"),
-    new Product("./Image/bookshelf.jpg", "Bookshelf - small", "160cm bookshelf", "100$"),
-    new Product("./Image/chair.jpg", "Chair - birch", "Birch wood chair", "60$"),
-    new Product("./Image/chair.jpg", "Chair - oak", "Oak wood chair", "80$"),
-    new Product("./Image/chair.jpg", "Chair - pine", "Pine wood chair", "40$"),
-    new Product("./Image/table.png", "Table - large", "220cm table", "125$"),
-    new Product("./Image/table.png", "Table - medium", "190cm table", "105$"),
-    new Product("./Image/table.png", "Table - small", "160cm table", "90$")
+    new Product("./Image/lineaShelf.jpg", "Linea shelf", "200cm", "890$"),
+    new Product("./Image/novaShelf.jpg", "Nova shlef", "150cm", "690$"),
+    new Product("./Image/aeroShelf.jpg", "Aero shelf", "180cm", "790$"),
+    new Product("./Image/auraChair.jpg", "Aura Chair", "Brown leather chair", "490$"),
+    new Product("./Image/havenChair.jpg", "Haven Chair", "Cozy chair", "690$"),
+    new Product("./Image/vibeChair.jpg", "Vibe Chair", "Contemporary dining chair", "390$"),
+    new Product("./Image/DiningTable.jpg", "Solara dining table", "220cm x 90cm oval", "1190$"),
+    new Product("./Image/CoffeeTable.jpg", "Nest coffee table", "90cm round", "690$"),
+    new Product("./Image/SideTable.jpg", "Loom side table", "50cm round", "390$")
 ]
 
 productList.forEach(product => product.creatProductCard())

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./CSS/style.css">
+
 </head>
 
 <body>
@@ -25,13 +26,48 @@
             <a href="./about.html" class="menuItem">About</a>
             <a href="./contact.html" class="menuItem">Contact Us</a>
         </nav>
+        <div class="contact">
+            <h1>Contact Us</h1>
+            <h4>Have questions about our furnitue? Reach out below</h4>
 
+            <form action="https://formsubmit.co/elena.grebeniuk.qa@gmail.com" method="POST" id="contactForm">
+                <div class="group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" name="name" id="fullName" placeholder="Anna Smith">
+                    <p id="nameError">Please, enter a valid full name</p>
+                </div>
+                <div class="group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="annas@example.com">
+                    <p id="emailError">Please, enter a valid email</p>
+                </div>
+                <div class="group">
+                    <label for="phoneNumber">Phone number</label>
+                    <input type="tel" name="phone" id="phoneNumber" placeholder="+1 235 462 4587">
+                    <p id="phoneError">Please, enter a valid phone number</p>
+                </div>
+                <div class="group">
+                    <label for="message">Meassage</label>
+                    <textarea name="message" name="msg" id="meassage" rows="10" placeholder="Your message here..."
+                        required></textarea>
+                    <p id="messageError">Please, enter your message</p>
+                </div>
+                <button id="submitBtn">Submit</button>
+                <p id="submitMessage">Your message has been submited!</p>
+            </form>
 
-  
+          
+        </div>
+        <div class="contactMsg">
+            <h1>We’ve received your message—thank you for contacting us! A member of our team will be in touch shortly.</h1>
+
+        </div>
+
 
     </div>
 
     <footer>© 2025 Product website. All rights reserved.</footer>
+
 
     <script type="module" src="./contact.js"></script>
     <script src="./common.js"></script>
